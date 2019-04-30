@@ -1,0 +1,50 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="intro intro-small">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      
+      {{ .Content }}
+
+      <table class="table table-sm opening-hours-table">
+        <tr>
+          <td class="day font-weight-bold">Montag</td>
+          <td>15:00 – 18:00 Uhr</td>
+        </tr>
+        <tr>
+          <td class="day font-weight-bold">Dienstag</td>
+          <td>15:00 – 18:00 Uhr</td>
+        </tr>
+        <tr>
+          <td class="day font-weight-bold">Mittwoch</td>
+          <td>nach Vereinbarung</td>
+        </tr>
+        <tr>
+          <td class="day font-weight-bold">Donnerstag</td>
+          <td>15:00 – 18:00 Uhr</td>
+        </tr>
+        <tr>
+          <td class="day font-weight-bold">Freitag</td>
+          <td>15:00 – 18:00 Uhr</td>
+        </tr>
+        <tr>
+          <td class="day font-weight-bold">Samstag</td>
+          <td>nach Vereinbarung</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{{ end }}

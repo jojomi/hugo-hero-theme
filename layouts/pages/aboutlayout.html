@@ -5,6 +5,7 @@
 {{ define "main" }}
 {{ partial "hero-image-fullscreen.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
 
+{{ if .Site.Data.features }}
 <div id="home" class="container pt-8 pb-8 pt-md-10 pb-md-10">
   <div class="row justify-content-center">
     {{ range .Site.Data.features }}
@@ -18,6 +19,7 @@
     {{end}}
   </div>
 </div>
+{{end}}
 
 {{ .Content }}
 

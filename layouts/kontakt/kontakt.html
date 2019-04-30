@@ -1,0 +1,45 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-contact{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="intro intro-small">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8">
+      {{ .Content }}
+      <ul>
+        {{ if .Site.Data.contact.phone -}}
+        <li><strong>Telefon: </strong><a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a></li>
+        {{ end -}}
+        {{ if .Site.Data.contact.fax -}}
+        <li><strong>Fax: </strong>{{ .Site.Data.contact.fax }}</li>
+        {{ end -}}
+        {{ if .Site.Data.contact.email -}}
+        <li><strong>E-Mail: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
+            {{ .Site.Data.contact.email }}</a></li>
+        {{ end -}}
+        {{ if .Site.Data.contact.address -}}
+        <li><strong>Adresse: </strong> {{ .Site.Data.contact.address }} (<a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{ .Site.Data.contact.address | safeHTMLAttr }}">Navigation</a>)</li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h3 class="mt-4">Öffnungszeiten</h3>
+
+      <p>Unsere Öffnungszeiten finden Sie <a href="{{ .Site.BaseURL }}/öffnungszeiten">hier</a>.</p>
+    </div>
+  </div>
+</div>
+{{ end }}
