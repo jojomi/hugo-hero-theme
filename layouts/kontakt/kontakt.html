@@ -18,7 +18,7 @@
       {{ .Content }}
       <ul>
         {{ if .Site.Data.contact.phone -}}
-        <li><strong>Telefon: </strong><a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a></li>
+        <li><strong>Telefon: </strong><a href="tel:{{ .Site.Data.contact.phoneraw }}">{{ .Site.Data.contact.phone }}</a></li>
         {{ end -}}
         {{ if .Site.Data.contact.fax -}}
         <li><strong>Fax: </strong>{{ .Site.Data.contact.fax }}</li>
@@ -38,7 +38,7 @@
     <div class="col-12 col-md-8">
       <h3 class="mt-4">Öffnungszeiten</h3>
 
-      <p>Unsere Öffnungszeiten finden Sie <a href="{{ .Site.BaseURL }}/öffnungszeiten">hier</a>.</p>
+      <p>Unsere Öffnungszeiten finden Sie <a href="{{ .Site.BaseURL }}öffnungszeiten">hier</a>.</p>
     </div>
   </div>
 </div>
